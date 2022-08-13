@@ -1,8 +1,26 @@
+*{
+    background-color: #131518;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}
+
 .contenedor{
     background-color: #232A34;
-    width: 90%;
-    margin: 0 auto;
+    /* max-width: 80%; */
+    /* margin: 0 auto; */
     border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    height: 300px;
+}
+
+.contenedor__icono{
+    background-color: #232A34;
 }
 
 .contenedor__icono img{
@@ -12,27 +30,51 @@
 }
 
 .contenedor__titulo{
+    background-color: #232A34;
     color: #FFFFFF;
+    font-family: 'Overpass', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
 }
 
 .contenedor__contenido{
+    background-color: #232A34;
     color: #969FAD;
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    margin: 15px 0;
 }
 
 .contenedor__puntaje .lista{
+    background-color: #232A34;
     list-style: none;
     display: flex;
     padding: 0;
     justify-content: space-between;
+    margin: 20px 0;
 }
 
 .contenedor__puntaje .lista__item{
     background-color: #262E38;
     border-radius: 50%;
-    padding: 6px 12px;
+    padding: 11px 17px;
     color: #7C8798;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
 }
 
 .contenedor__boton{
+    background-color: #232A34;
+}
+
+.contenedor__boton button{
+    border-radius: 25px;
+    padding: 15px;
+    width: 100%;
+    border: 0;
+    background-color: #FC7614;
     color: #FFFFFF;
+    font-family: 'Overpass', sans-serif;
+    margin: 10px 0 0 0;
 }
