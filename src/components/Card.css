@@ -1,0 +1,38 @@
+.contenedor{
+    background-color: #232A34;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.contenedor__icono img{
+    background-color: #262E38;
+    border-radius: 50%;
+    padding: 12px 12px;
+}
+
+.contenedor__titulo{
+    color: #FFFFFF;
+}
+
+.contenedor__contenido{
+    color: #969FAD;
+}
+
+.contenedor__puntaje .lista{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.contenedor__puntaje .lista__item{
+    background-color: #262E38;
+    border-radius: 50%;
+    padding: 6px 12px;
+    color: #7C8798;
+}
+
+.contenedor__boton{
+    color: #FFFFFF;
+}
