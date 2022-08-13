@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Card from './components/Card'
+import Thanks from './components/Thanks'
 // import './App.css'
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
 
   return (
     <div className="">
-      <Card />
+      {/* <Card /> */}
+      <Thanks />
     </div>
   )
 }
