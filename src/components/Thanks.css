@@ -1,5 +1,8 @@
 .contenedor__icono--thanks{
     background-color: #232A34;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .contenedor__icono--thanks img{
@@ -9,11 +12,49 @@
 }
 
 .contenedor__puntaje-thanks{
-    color: #FC7614;
-    width: 70%;
-    border-radius: 25px;
-    padding: 10px;
-    text-align: center;
+    background-color: #232A34;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor__puntaje-thanks p{
     background-color: #262E38;
     font-family: 'Overpass', sans-serif;
+    border-radius: 25px;
+    color: #FC7614;
+    padding: 7px 14px;
+    margin: 10px 0;
+}
+
+.contenedor__subTitulo{
+    background-color: #232A34;
+    color: #FFFFFF;
+    font-family: 'Overpass', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor__subTitulo p{
+    background-color: #232A34;
+    color: #FFFFFF;
+    font-family: 'Overpass', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.contenedor__descripcion{
+    background-color: #232A34;
+    color: #969FAD;
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.contenedor__descripcion p{
+    background-color: #232A34;
+    text-align: center;
 }

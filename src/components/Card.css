@@ -64,6 +64,35 @@
     font-weight: bold;
 }
 
+.contenedor__puntaje .lista__item:hover{
+    background-color: #FC7614;
+    border-radius: 50%;
+    padding: 11px 17px;
+    color: #FFFFFF;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenedor__puntaje .lista__item--presionado{
+    background-color: #7C8798;
+    border-radius: 50%;
+    padding: 11px 17px;
+    color: #fff;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+}
+
+.contenedor__puntaje .lista__item--presionado:hover{
+    background-color: #7C8798;
+    border-radius: 50%;
+    padding: 11px 17px;
+    color: #fff;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .contenedor__boton{
     background-color: #232A34;
 }
@@ -77,4 +106,16 @@
     color: #FFFFFF;
     font-family: 'Overpass', sans-serif;
     margin: 10px 0 0 0;
+}
+
+.contenedor__boton button:hover{
+    background-color: #FFFFFF;
+    color: #FC7614;
+    border-radius: 25px;
+    padding: 15px;
+    width: 100%;
+    border: 0;
+    font-family: 'Overpass', sans-serif;
+    margin: 10px 0 0 0;
+    cursor: pointer;
 }

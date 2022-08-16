@@ -11,14 +11,20 @@ const Thanks = () => {
                     <img src={iconoThanks} alt="" />
                 </div>
                 <div className="contenedor__puntaje-thanks">
-                    You selected 4 out of 5
+                    <p>
+                        You selected 4 out of 5
+                    </p>
                 </div>
-                <div className="contenedor__titulo">
-                    Thank you!
+                <div className="contenedor__subTitulo">
+                    <p>
+                        Thank you!
+                    </p>
                 </div>
-                <div className='contenedor__contenido'>
-                    We appreciate you taking the time to give a rating. If you ever need more support, 
-                    don’t hesitate to get in touch!
+                <div className='contenedor__descripcion'>
+                    <p>
+                        We appreciate you taking the time to give a rating. If you ever need more support, 
+                        don’t hesitate to get in touch!
+                    </p>
                 </div>
             </div>
         </div>
