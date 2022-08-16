@@ -1,12 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Card from './components/Card'
 import Thanks from './components/Thanks'
 // import './App.css'
 
 function App() {
-  // const [arrayPuntaje, setArrayPuntaje] = useState([1, 2, 3, 4, 5]);
+  const [presionado, setPresionado] = useState(false);
 
+  // useEffect(()=>{
+  //   console.log(presionado, estadoPresionado);
+  // },[presionado]);
+  const [puntuacion, setPuntuacion] = useState([]);
+  // useEffect(()=>{
+  //   console.log(puntuacion);
+  // },[puntuacion]);
   const [estadoPresionado, setEstadoPresionado] = useState([
       {
           num: 1,
@@ -32,8 +39,13 @@ function App() {
 
   return (
     <div className="">
-      <Card data={estadoPresionado} setData={setEstadoPresionado} />
-      {/* <Thanks /> */}
+      {
+        puntuacion && puntuacion.every(item => item.estado === false) ? (
+          <Card data={estadoPresionado} setData={setEstadoPresionado} setPresionado={setPresionado} setPuntuacion={setPuntuacion} />
+        ) : (
+          <Thanks puntuacion={puntuacion} />
+        )
+      }
     </div>
   )
 }

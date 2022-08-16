@@ -2,21 +2,36 @@ import React, { useState } from 'react'
 import './Card.css';
 import iconoStar from '../assets/icon-star.svg'
 
-const Card = ({data, setData}) => {
+const Card = ({data, setData, setPresionado, setPuntuacion}) => {
     const [checked, setChecked] = useState(false);
     
     const presionado = i => {
-        console.log(i);
-        const arr = data;
+        // console.log(i);
+        let arr = data;
 
         for (let index = 0; index < arr.length; index++) {
             if(arr[index].num-1 === i){
                 arr[index].estado = !arr[index].estado;
                 setChecked(!arr[index].estado);
+                // setPresionado(!arr[index].estado);
             }
         }
-        console.log(arr);
+        // console.log(arr);
         setData(arr);
+    }
+
+    const enviarPuntuacion = () => {
+        // console.log(data);
+        let arr = data;
+        let estado = false;
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i].estado === true) estado = true; else estado = false;
+            // if(arr[i].estado === true) setPuntuacion(arr[i].num);
+        }
+        // console.log(estado);
+        setPresionado(estado);
+        // console.log(arr);
+        setPuntuacion(arr);
     }
 
     return (
@@ -38,16 +53,16 @@ const Card = ({data, setData}) => {
                             {
                                 data && data.map(
                                     (item, i) => item.estado === true ? (
-                                        <li className='contenedor__puntaje lista__item--presionado' onClick={()=>presionado(i)}>{item.num}</li>
+                                        <li key={i} className='contenedor__puntaje lista__item--presionado' onClick={()=>presionado(i)}>{item.num}</li>
                                     ) : (
-                                        <li className='contenedor__puntaje lista__item' onClick={()=>presionado(i)}>{item.num}</li>
+                                        <li key={i} className='contenedor__puntaje lista__item' onClick={()=>presionado(i)}>{item.num}</li>
                                     )
                                 )
                             }
                         </ul>
                     </div>
                     <div className='contenedor__boton'>
-                        <button>
+                        <button onClick={enviarPuntuacion}>
                             Submit
                         </button>
                     </div>

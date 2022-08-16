@@ -1,8 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Thanks.css';
 import iconoThanks from '../assets/illustration-thank-you.svg';
 
-const Thanks = () => {
+const Thanks = ({puntuacion}) => {
+
+    const [numero, setNumero] = useState(-1);
+
+    useEffect(()=>{
+        if(puntuacion.length > 0){
+            for (let i = 0; i < puntuacion.length; i++) {
+                if(puntuacion[i].estado === true){
+                    setNumero(puntuacion[i].num);
+                }
+            }
+        }
+    },[puntuacion])
+
+
   return (
     <>
         <div className="card">
@@ -12,7 +26,7 @@ const Thanks = () => {
                 </div>
                 <div className="contenedor__puntaje-thanks">
                     <p>
-                        You selected 4 out of 5
+                        You selected {numero} out of 5
                     </p>
                 </div>
                 <div className="contenedor__subTitulo">
